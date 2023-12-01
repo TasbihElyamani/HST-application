@@ -30,7 +30,7 @@ class _TodayScreenState extends State<TodayScreen> {
           children: [
             Container(
               alignment: Alignment.centerLeft,
-              margin: const EdgeInsets.only(top: 30),
+              margin: const EdgeInsets.only(top: 16),
               child: Text(
                 "WELCOME",
                 style: GoogleFonts.rubik(
@@ -169,7 +169,7 @@ class _TodayScreenState extends State<TodayScreen> {
               },
             ),
             Container(
-              margin: const EdgeInsets.only(top: 32),
+              margin: const EdgeInsets.only(top: 10),
               child: Builder(
                 builder: (context) {
                   final GlobalKey<SlideActionState> key = GlobalKey();

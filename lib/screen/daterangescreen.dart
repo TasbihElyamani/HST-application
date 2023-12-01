@@ -1,6 +1,6 @@
-import 'package:flutter/foundation.dart';
+// import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/date_time_patterns.dart';
+// import 'package:intl/date_time_patterns.dart';
 
 class Daterangescreen extends StatefulWidget {
   const Daterangescreen({super.key});
@@ -39,7 +39,6 @@ class _DaterangescreenState extends State<Daterangescreen> {
                   lastDate: DateTime.now().add(
                     const Duration(days: 356),
                   ),
-                  
                 );
 
                 if (result != null) {

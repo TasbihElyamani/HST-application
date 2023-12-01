@@ -1,4 +1,4 @@
 class User {
-  static String userID = "";
-  static String password = "";
+ static String userID = '';
+  
 }

@@ -65,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text('Techno'),
+        title: const Text('HST'),
         backgroundColor: Color.fromARGB(255, 148, 205, 230),
       ),
       bottomNavigationBar: CurvedNavigationBar(
