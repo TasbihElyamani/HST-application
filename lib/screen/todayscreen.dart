@@ -1,5 +1,5 @@
 import 'package:app/model/user.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+// import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:slide_to_act/slide_to_act.dart';
@@ -186,46 +186,46 @@ class _TodayScreenState extends State<TodayScreen> {
                     onSubmit: () async {
                       print(DateFormat('hh: mm').format(DateTime.now()));
 
-                      QuerySnapshot snap = await FirebaseFirestore.instance
-                          .collection("user")
-                          .where('id', isEqualTo: User.userID)
-                          .get();
+                      // QuerySnapshot snap = await FirebaseFirestore.instance
+                      //     .collection("user")
+                      //     .where('id', isEqualTo: User.userID)
+                      //     .get();
 
-                       print(snap.docs[0].id);
-                       print(DateFormat('dd MMMM yyyy').format(DateTime.now()));
+                      //  print(snap.docs[0].id);
+                      //  print(DateFormat('dd MMMM yyyy').format(DateTime.now()));
 
-                      DocumentSnapshot snap2 = await FirebaseFirestore.instance
-                          .collection("user")
-                          .doc(snap.docs[0].id)
-                          .collection("Record")
-                          .doc(
-                              DateFormat('dd MMMM yyyy').format(DateTime.now()))
-                          .get();
+                      // DocumentSnapshot snap2 = await FirebaseFirestore.instance
+                      //     .collection("user")
+                      //     .doc(snap.docs[0].id)
+                      //     .collection("Record")
+                      //     .doc(
+                      //         DateFormat('dd MMMM yyyy').format(DateTime.now()))
+                      //     .get();
 
-                      try {
-                        // print(snap2['checkIn']);
-                        String checkIn = snap2['checkIn'];
-                          await FirebaseFirestore.instance
-                            .collection("user")
-                            .doc(snap.docs[0].id)
-                            .collection("Record")
-                            .doc(DateFormat('dd MMMM yyyy')
-                                .format(DateTime.now()))
-                            .update({
-                          'checkIn': checkIn,
-                          'checkOut': DateFormat('hh:mm').format(DateTime.now()),
-                        });
-                      } catch (e) {
-                        await FirebaseFirestore.instance
-                            .collection("user")
-                            .doc(snap.docs[0].id)
-                            .collection("Record")
-                            .doc(DateFormat('dd MMMM yyyy')
-                                .format(DateTime.now()))
-                            .set({
-                          'CheckIn': DateFormat('hh:mm').format(DateTime.now()),
-                        });
-                      }
+                      // try {
+                      //   // print(snap2['checkIn']);
+                      //   String checkIn = snap2['checkIn'];
+                      //     await FirebaseFirestore.instance
+                      //       .collection("user")
+                      //       .doc(snap.docs[0].id)
+                      //       .collection("Record")
+                      //       .doc(DateFormat('dd MMMM yyyy')
+                      //           .format(DateTime.now()))
+                      //       .update({
+                      //     'checkIn': checkIn,
+                      //     'checkOut': DateFormat('hh:mm').format(DateTime.now()),
+                      //   });
+                      // } catch (e) {
+                      //   await FirebaseFirestore.instance
+                      //       .collection("user")
+                      //       .doc(snap.docs[0].id)
+                      //       .collection("Record")
+                      //       .doc(DateFormat('dd MMMM yyyy')
+                      //           .format(DateTime.now()))
+                      //       .set({
+                      //     'CheckIn': DateFormat('hh:mm').format(DateTime.now()),
+                      //   });
+                      // }
                     },
                   );
                 },

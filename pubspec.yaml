@@ -37,10 +37,10 @@ dependencies:
   mysql1: ^0.20.0
   provider: ^6.0.5
   #password: ^1.0.0
-  firebase_core: ^2.17.0
+  # firebase_core: ^2.17.0
   shared_preferences: ^2.2.1
-  cloud_firestore: ^4.9.3
-  firebase_auth: ^4.10.1
+  # cloud_firestore: ^4.9.3
+  # firebase_auth: ^4.10.1
   flutter_keyboard_visibility: ^5.4.1
   intl: ^0.18.0
   month_year_picker: ^0.3.0+1 
